@@ -422,6 +422,13 @@
         <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
         <maven-nexus-staging-plugin.version>1.6.8</maven-nexus-staging-plugin.version>
         <commons-vfs2.version>2.4.1</commons-vfs2.version>
+                <commons-io.version>2.22.0</commons-io.version>
+                <slf4j.version>2.0.18</slf4j.version>
+                <vfs-ext.version>3.0.2</vfs-ext.version>
+                <vfs-ftpd.version>1.0</vfs-ftpd.version>
+                <vfs-mysql.version>1.0</vfs-mysql.version>
+                <vfs-nfs.version>3.0.2</vfs-nfs.version>
+                <vfs-webdav.version>1.0</vfs-webdav.version>
     </properties>
     
     <dependencies>
@@ -438,13 +445,13 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>2.0.13</version>
+            <version>${slf4j.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>2.0.13</version>
+            <version>${slf4j.version}</version>
             <scope>test</scope>
         </dependency>
 
@@ -484,31 +491,31 @@
         <dependency>
             <groupId>com.sshtools</groupId>
             <artifactId>vfs-nfs</artifactId>
-            <version>3.0.2</version>
+            <version>${vfs-nfs.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.sshtools/vfs-ext -->
         <dependency>
             <groupId>com.sshtools</groupId>
             <artifactId>vfs-ext</artifactId>
-            <version>3.0.2</version>
+            <version>${vfs-ext.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.impact/vfs-mysql -->
         <dependency>
             <groupId>com.impact</groupId>
             <artifactId>vfs-mysql</artifactId>
-            <version>1.0</version>
+            <version>${vfs-mysql.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.impact/vfs-ftpd -->
         <dependency>
             <groupId>com.impact</groupId>
             <artifactId>vfs-ftpd</artifactId>
-            <version>1.0</version>
+            <version>${vfs-ftpd.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.impact/vfs-webdav -->
         <dependency>
             <groupId>com.impact</groupId>
             <artifactId>vfs-webdav</artifactId>
-            <version>1.0</version>
+            <version>${vfs-webdav.version}</version>
         </dependency>
                                     
             <!-- For JUnit Jupiter -->
@@ -521,10 +528,58 @@
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
-            <version>2.11.0</version>
+            <version>${commons-io.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-simple</artifactId>
+                <version>${slf4j.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.sshtools</groupId>
+                <artifactId>vfs-nfs</artifactId>
+                <version>${vfs-nfs.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sshtools</groupId>
+                <artifactId>vfs-ext</artifactId>
+                <version>${vfs-ext.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.impact</groupId>
+                <artifactId>vfs-mysql</artifactId>
+                <version>${vfs-mysql.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.impact</groupId>
+                <artifactId>vfs-ftpd</artifactId>
+                <version>${vfs-ftpd.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.impact</groupId>
+                <artifactId>vfs-webdav</artifactId>
+                <version>${vfs-webdav.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     
 
 </project>
