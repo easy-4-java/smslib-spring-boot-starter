@@ -17,7 +17,12 @@ package org.apache.vfs2.spring.boot;
 
 import java.util.Properties;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
+
+@ConfigurationProperties(VFS2Properties.PREFIX)
 public class VFS2Properties {
+
+    public static final String PREFIX = "vfs2";
 
 	public static final String DEFAULT_TEMPLATE_LOADER_PATH = "classpath:/templates/";
 

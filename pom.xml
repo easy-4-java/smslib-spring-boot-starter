@@ -564,6 +564,12 @@
             <groupId>com.sshtools</groupId>
             <artifactId>vfs-nfs</artifactId>
             <version>${vfs-nfs.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.sshtools</groupId>
+                    <artifactId>nfs-client-java</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         
         <!-- https://mvnrepository.com/artifact/com.sshtools/vfs-ext -->
@@ -598,6 +604,12 @@
             <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- For Spring Boot Test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
         <!-- For Commons IO -->
