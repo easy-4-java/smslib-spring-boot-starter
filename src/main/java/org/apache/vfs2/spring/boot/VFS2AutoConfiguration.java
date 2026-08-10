@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * Auto-configuration for Apache Commons VFS2 FileSystemManager.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 @Configuration

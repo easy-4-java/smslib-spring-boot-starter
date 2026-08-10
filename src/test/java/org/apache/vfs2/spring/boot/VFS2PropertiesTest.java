@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 /**
  * Tests for {@link VFS2Properties}.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  */
 class VFS2PropertiesTest {
 
