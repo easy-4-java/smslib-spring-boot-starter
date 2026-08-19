@@ -20,6 +20,12 @@ import java.util.Properties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(VFS2Properties.PREFIX)
+/**
+ * <p>Configuration properties for VFS2.</p>
+ *
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
+ */
 public class VFS2Properties {
 
     public static final String PREFIX = "vfs2";
