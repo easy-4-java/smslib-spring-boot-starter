@@ -48,6 +48,10 @@ public class VFS2AutoConfiguration {
 	 * @throws FileSystemException if the manager cannot be created
 	 */
 	@Bean
+    /**
+     * <p>File system manager.</p>
+     * @return the file system manager
+     */
 	public FileSystemManager fileSystemManager() throws FileSystemException {
 		FileSystemManager fsm = VFS.getManager();
 		logger.info("VFS2 FileSystemManager initialized with {} registered providers",
