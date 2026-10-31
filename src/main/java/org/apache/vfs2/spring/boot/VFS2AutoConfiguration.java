@@ -63,8 +63,6 @@ public class VFS2AutoConfiguration {
 	public FileSystemManager  FileSystemManager() throws FileSystemException {
 		FileSystemManager fsm = VFS.getManager();
 		
-		fsm.
-		
 		    FileObject file = fsm.resolveFile(new File("D://vfs").getAbsolutePath());
 		    
 		    DefaultFileMonitor fileMonitor = new DefaultFileMonitor(new FileListener() {
@@ -91,9 +89,6 @@ public class VFS2AutoConfiguration {
 		    });
 		    fileMonitor.addFile(file);
 		    fileMonitor.start();
-		    while(true){
-		        Thread.sleep(1000);
-		    }
 		return fsm;
 	}
 	
