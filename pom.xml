@@ -488,6 +488,17 @@
             <groupId>com.sshtools</groupId>
             <artifactId>vfs-nfs</artifactId>
             <version>${vfs-nfs.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.sshtools</groupId>
+                    <artifactId>nfs-client-java</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.emc.ecs</groupId>
+            <artifactId>nfs-client</artifactId>
+            <version>1.1.0</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.sshtools/vfs-ext -->
         <dependency>
